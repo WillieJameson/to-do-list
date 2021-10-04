@@ -14,7 +14,7 @@ function App() {
         <h1>To do List  </h1>
       </header>
       <Form InputText={InputText} Day={Day} setDay={setDay} Todos={Todos} setTodos={setTodos} setInputText={setInputText}/>
-      <ToDoList setTodos={setTodos} Todos={Todos} setInputText={setInputText} setDay={setDay} InputText={InputText}/>
+      <ToDoList setTodos={setTodos} Todos={Todos} Day={Day} setDay={setDay} setInputText={setInputText} setDay={setDay} InputText={InputText}/>
     </div>
   )
 }

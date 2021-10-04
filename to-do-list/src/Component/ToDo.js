@@ -1,6 +1,6 @@
 import React from 'react'
 
-function ToDo({Text, todo, Todos, setTodos, setInputText, key, InputText}) {
+function ToDo({Text, todo, Todos, setTodos, setInputText, key, InputText, Day, setDay}) {
 
   const TrashHandle = () =>{
     setTodos(Todos.filter( (el) =>
@@ -9,12 +9,15 @@ function ToDo({Text, todo, Todos, setTodos, setInputText, key, InputText}) {
   }
 
   const EditHandle = (index) =>{ 
-    Todos.filter((todo)=> {
-      if(todo.id === index + 1){
-        todo.text = InputText
+    setTodos(Todos.map((item)=>{
+      if(item.id === todo.id){
+        return {
+          
+        }
       }
-      return todo
+      return item;
     })
+    )
   }
 
   const CompleteHandle = () =>{

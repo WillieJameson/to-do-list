@@ -1,7 +1,7 @@
 import React from 'react';
 import ToDo from './ToDo';
 
-function ToDoList({Todos, setTodos, setInputText, InputText}) {
+function ToDoList({Todos, setTodos, setInputText, InputText, Day, setDay}) {
   
 
     return(
@@ -13,7 +13,6 @@ function ToDoList({Todos, setTodos, setInputText, InputText}) {
               <ul className="todo-list">
                   {Todos.map((todo)=>{
                     if(todo.Day === "Monday"){
-                      console.log(todo)
                       return(
                         <ToDo 
                         setTodos={setTodos} 
@@ -24,6 +23,8 @@ function ToDoList({Todos, setTodos, setInputText, InputText}) {
                         Status={todo.completed}
                         setInputText={setInputText}
                         InputText={InputText}
+                        Day={Day} 
+                        setDay={setDay}
                         />
                       )}
                     else{
