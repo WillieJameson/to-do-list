@@ -4,8 +4,8 @@
   box-sizing: border-box;
 }
 body {
-  background-image: linear-gradient(147deg, #FFE53B 0%, #FF2525 74%);
-  color: white;
+  background-image:linear-gradient(147deg, #F0E68C 0%, #fd5c63 74%) ;
+  color:#F0F8FF  ;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
 }
@@ -20,13 +20,28 @@ form {
   justify-content: center;
   align-items: center;
 }
-form input,
-form button {
-  padding: 0.5rem;
+
+form input{
+  width: 40%;
+  padding: 2rem;
   font-size: 2rem;
   border: none;
   background: white;
 }
+form select{
+  color: #f7fffe;
+  padding: 2.4rem;
+  font-size: 1rem;
+  background: #ff6f47 ;
+}
+
+form button {
+  padding: 2rem;
+  font-size: 2rem;
+  border: none;
+  background: white;
+}
+
 form button {
   color: #ff6f47;
   background: #f7fffe;
@@ -37,10 +52,62 @@ form button:hover {
   background: #ff6f47;
   color: white;
 }
+
+.todolist{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1em;
+  justify-items: center;
+
+}
+
+.text{
+  font-size: 2em;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  border-bottom: solid 0.2em ;
+}
+
+.Container{
+  border-radius: 2.5%;
+  width: 75%;
+}
+
 .todo-container {
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+.Monday{
+  background-color: #7CB9E8;
+}
+
+.Tuesday{
+  background-color: #72A0C1;
+}
+
+.Wednesday{
+  background-color:#89CFF0 ;
+}
+
+.Thursday{
+  background-color: #00BFFF;
+}
+
+.Friday{
+  background-color: #0CAFFF;
+}
+
+.Saturday{
+  background-color: #005A9C;
+}
+
+.Sunday{
+  background-color: #1877F2;
+  grid-column-start: 2;
+  grid-column-end: 3;
 }
 
 .todo-list {
@@ -64,6 +131,8 @@ form button:hover {
 .todo li {
   flex: 1;
 }
+
+
 
 .trash-btn,
 .complete-btn {

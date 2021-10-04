@@ -1,11 +1,20 @@
 import React from 'react'
 
-function ToDo({Text, todo, Todos, setTodos}) {
+function ToDo({Text, todo, Todos, setTodos, setInputText, key, InputText}) {
 
   const TrashHandle = () =>{
     setTodos(Todos.filter( (el) =>
       el.id !== todo.id
     ))
+  }
+
+  const EditHandle = (index) =>{ 
+    Todos.filter((todo)=> {
+      if(todo.id === index + 1){
+        todo.text = InputText
+      }
+      return todo
+    })
   }
 
   const CompleteHandle = () =>{
@@ -22,16 +31,27 @@ function ToDo({Text, todo, Todos, setTodos}) {
   }
 
   return (
-    <div className="todo">
-        <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{Text}</li>
-        <button onClick={CompleteHandle} className="complete-btn"> 
-          <i className="fas fa-check"></i>
-         </button>
+    <div>
+      <div className ="Day">
+        <div className="todo">  
+          <button className="trash-btn" onClick={EditHandle}> 
+            <i className="">edit</i>
+          </button>
 
-        <button className="trash-btn" onClick={TrashHandle}> 
-          <i className="fas fa-trash"></i>
-         </button>
+          <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{Text}</li>
+          <button onClick={CompleteHandle} className="complete-btn"> 
+            <i className="fas fa-check"></i>
+          </button>
+          
+          <button className="trash-btn" onClick={TrashHandle}> 
+            <i className="fas fa-trash"></i>
+          </button>
+        </div>
+      </div>
     </div>
+    
+      
+
   )
 }
 
