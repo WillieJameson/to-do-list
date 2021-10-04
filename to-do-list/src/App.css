@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  background-image:linear-gradient(147deg, #F0E68C 0%, #fd5c63 74%) ;
+  background-image:linear-gradient(147deg, #F7A44A 0%, #F17B6E 74%) ;
   color:#F0F8FF  ;
   font-family: "Poppins", sans-serif;
   min-height: 100vh;
@@ -32,7 +32,7 @@ form select{
   color: #f7fffe;
   padding: 2.4rem;
   font-size: 1rem;
-  background: #ff6f47 ;
+  background: #8A6293 ;
 }
 
 form button {
@@ -43,13 +43,13 @@ form button {
 }
 
 form button {
-  color: #ff6f47;
+  color: #8A6293;
   background: #f7fffe;
   cursor: pointer;
   transition: all 0.3s ease;
 }
 form button:hover {
-  background: #ff6f47;
+  background: #8A6293;
   color: white;
 }
 
@@ -81,31 +81,31 @@ form button:hover {
 
 }
 .Monday{
-  background-color: #7CB9E8;
+  background-color: #4F597E;
 }
 
 .Tuesday{
-  background-color: #72A0C1;
+  background-color: #4F597E;
 }
 
 .Wednesday{
-  background-color:#89CFF0 ;
+  background-color:#4F597E ;
 }
 
 .Thursday{
-  background-color: #00BFFF;
+  background-color: #4F597E;
 }
 
 .Friday{
-  background-color: #0CAFFF;
+  background-color: #4F597E;
 }
 
 .Saturday{
-  background-color: #005A9C;
+  background-color: #4F597E;
 }
 
 .Sunday{
-  background-color: #1877F2;
+  background-color: #4F597E;
   grid-column-start: 2;
   grid-column-end: 3;
 }
@@ -136,7 +136,7 @@ form button:hover {
 
 .trash-btn,
 .complete-btn {
-  background: #ff6f47;
+  background: #C8688C;
   color: white;
   border: none;
   padding: 1rem;
@@ -184,7 +184,7 @@ select {
   overflow: hidden;
 }
 select {
-  color: #ff6f47;
+  color: #8A6293;
   font-family: "Poppins", sans-serif;
   cursor: pointer;
   width: 12rem;
@@ -196,7 +196,7 @@ select {
   top: 0;
   right: 0;
   padding: 1rem;
-  background: #ff6f47;
+  background: #8A6293;
   cursor: pointer;
   pointer-events: none;
 }
