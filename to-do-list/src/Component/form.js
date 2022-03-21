@@ -9,8 +9,10 @@ import React from 'react'
 
 function Form({InputText, setInputText, Todos, setTodos, setDay, Day}){
 
+
   const InputChange = (e) =>{
     setInputText (e.target.value);
+    console.log(Todos)
   }
 
   const InputDay = (e) =>{
@@ -27,15 +29,18 @@ function Form({InputText, setInputText, Todos, setTodos, setDay, Day}){
     ]);
 
 
+
+
     //when submit setInputText state become empty string
     setInputText("")
   }
+  
 
     return (
       <div>
         <form>
         <input value={InputText} onChange={InputChange} type="text" placeholder="write your to do list this week" className="todo-input" />
-        <select value={Day} onChange={InputDay}>
+        <select value={Day} onChange={InputDay} className="select-button">
           <option >Monday</option>
           <option >Tuesday</option>
           <option >Wednesday</option>

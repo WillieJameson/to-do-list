@@ -1,7 +1,7 @@
 import React from 'react';
 import ToDo from './ToDo';
 
-function ToDoList({Todos, setTodos, setInputText, InputText, Day, setDay}) {
+function ToDoList({Todos, setTodos, setInputText, InputText, Day, setDay }) {
   
 
     return(

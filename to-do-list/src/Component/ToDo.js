@@ -7,19 +7,7 @@ function ToDo({Text, todo, Todos, setTodos, setInputText, key, InputText, Day, s
       el.id !== todo.id
     ))
   }
-
-  const EditHandle = (index) =>{ 
-    setTodos(Todos.map((item)=>{
-      if(item.id === todo.id){
-        return {
-          
-        }
-      }
-      return item;
-    })
-    )
-  }
-
+  
   const CompleteHandle = () =>{
     setTodos(Todos.map((item)=>{
       if(item.id === todo.id){
@@ -37,10 +25,6 @@ function ToDo({Text, todo, Todos, setTodos, setInputText, key, InputText, Day, s
     <div>
       <div className ="Day">
         <div className="todo">  
-          <button className="trash-btn" onClick={EditHandle}> 
-            <i className="">edit</i>
-          </button>
-
           <li className={`todo-item ${todo.completed ? "completed" : ""}`}>{Text}</li>
           <button onClick={CompleteHandle} className="complete-btn"> 
             <i className="fas fa-check"></i>
@@ -59,3 +43,5 @@ function ToDo({Text, todo, Todos, setTodos, setInputText, key, InputText, Day, s
 }
 
 export default ToDo
+
+
